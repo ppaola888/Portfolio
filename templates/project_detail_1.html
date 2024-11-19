@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+
+{% block title %}Dettaglio Progetto 1{% endblock %}
+
+{% block content %}
+
+<section class="project-detail">
+    <div class="container-project-detail">
+        <h1>Bike Shop</h1>
+        <img src="{{ url_for('static', filename='images/project1.jpg') }}" alt="Bike Shop">
+        <h4>Descrizione</h4>
+        <p>Bike Shop è un'applicazione web di e-commerce che consente agli utenti di esplorare e acquistare biciclette, bici elettriche, monopattini e accessori, progettato per offrire un'esperienza di acquisto online intuitiva e coinvolgente. Il progetto è stato sviluppato con Flask come framework backend e include funzionalità per l'autenticazione, la gestione della wishlist, dei prodotti e degli ordini, e l'integrazione con Stripe per i pagamenti sicuri. L'obiettivo è stato quello di creare un'interfaccia utente user-friendly.</p>
+
+        <h4> Sfide e Criticità</h4>
+        <ul>
+            <li><strong>Interfaccia Utente:</strong> Ho creato un'interfaccia moderna e intuitiva, progettata per essere accessibile a utenti di tutte le età e livelli di esperienza. La navigazione è stata ottimizzata per consentire agli utenti di trovare rapidamente i prodotti desiderati.</li>
+            <li><strong>Integrazione Tecnologie:</strong> Ho utilizzato diverse tecnologie (HTML, CSS, JavaScript, Flask), che richiedevano un'attenta integrazione per garantire la comunicazione corretta tra il front-end e il back-end, risolvendo anche problematiche legate alla gestione dei dati.</li>
+            <li><strong>Ottimizzazione per Dispositivi Mobili:</strong> E' stata una sfida cruciale garantire che il sito fosse responsive. È stato necessario testare il design su vari dispositivi per assicurare una fruibilità ottimale su schermi di tutte le dimensioni.</li>
+            <li><strong>Gestione della Sicurezza:</strong> La sicurezza dei dati degli utenti, in particolare per quanto riguarda le informazioni di pagamento, è stata una priorità. Ho implementato protocolli di sicurezza robusti per proteggere i dati sensibili degli utenti, in particolare per quanto riguarda i pagamenti, utilizzando Stripe per garantire transazioni sicure.</li>
+            <li><strong>Accesso Amministrativo:</strong> Solo gli account con <code>is_admin=True</code> possono accedere alle funzionalità di amministrazione, inclusa la gestione di prodotti, utenti e ordini.</li>
+        </ul>
+
+
+        <p class="paragraph-resume">Il progetto Bike Shop offre un'esperienza di acquisto completa e sicura, affrontando le sfide moderne nella gestione di un sito e-commerce, dal design alla gestione delle transazioni sicure con Stripe.</p>
+        <a href="https://github.com/ppaola888/Bike-website" class="btn-box" target="_blank">Visita il Progetto</a>
+    </div>
+</section>
+{% endblock %}

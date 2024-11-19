@@ -1,0 +1,40 @@
+{% extends 'index.html' %}
+
+{% block title %}Cocktail DB Web Application{% endblock %}
+
+{% block content %}
+
+<section class="project-detail">
+    <div class="container-project-detail">
+        <h1>Cocktail DB API Application</h1>
+        <img src="{{ url_for('static', filename='images/project3.jpg') }}" alt="Cocktail DB API Web Application">
+        
+        <h4>Descrizione</h4>
+        <p>
+            "Cocktail DB Web Application" è un'applicazione web costruita con Node.js ed Express, progettata per consentire agli utenti di scoprire, cercare e visualizzare ricette di cocktail.
+            L'app si integra con l'API TheCocktailDB per recuperare i dati dei cocktail e include funzionalità come la visualizzazione di cocktail casuali, la ricerca per nome, ingrediente, lettera e tipo, oltre alla possibilità di aggiungere cocktail ai preferiti.
+        </p>
+
+        <h4>Sfide e Criticità</h4>
+        <ul>
+            <li><strong>Integrazione con API di terze parti:</strong> L'integrazione con TheCocktailDB API ha richiesto un'attenta gestione delle chiamate HTTP utilizzando Axios, per ottimizzare la velocità, le richieste e gestire eventuali errori.</li>
+            <li><strong>Gestione Paginazione:</strong> Per migliorare l'organizzazione dei dati recuperati dall'API e renderli più facilmente consultabili, ho implementato una funzionalità di paginazione che divide i risultati in pagine.</li>
+            <li><strong>API RESTful:</strong> Ho progettato l'applicazione per supportare una gestione dinamica dei cocktail tramite metodi HTTP. 
+                In particolare:
+                <ul>
+                    <li><strong>GET:</strong> Recupera cocktail filtrati per ingredienti, bicchiere, tipo o nome, offrendo risultati precisi e personalizzati.</li>
+                    <li><strong>POST:</strong> Consente agli utenti di aggiungere nuovi cocktail alla lista dei preferiti, memorizzata temporaneamente in sessione per un'esperienza personalizzata.</li>
+                </ul>
+            </li>
+            <li><strong>Ottimizzazione per Dispositivi Mobili:</strong> Sebbene l'applicazione sia incentrata sull'API, è stato importante assicurare che la parte frontend fosse responsive, permettendo una facile navigazione anche su dispositivi mobili utilizzando il grid system di Bootstrap.</li>
+            <li><strong>Tecnologie Utilizzate:</strong> L'applicazione è stata sviluppata utilizzando Node.js e Express.js per il backend, garantendo un'architettura scalabile e performante. Inoltre, ho sfruttato<strong>Axios</strong> per la gestione efficiente delle richieste HTTP verso l'API TheCocktailDB, assicurando una comunicazione rapida e affidabile tra client e server.</li>
+            <li><strong>Filtri Dinamici:</strong> Ho inserito filtri dinamici per la ricerca dei cocktail in base a vari parametri, come nome, ingredienti, tipo e lettera per migliorare l'accessibilità delle informazioni fornite dall'API.</li>
+            <li><strong>Gestione dati persistenti:</strong> Anche senza un database, ho utilizzato sessioni per salvare temporaneamente i cocktail preferiti dell'utente, garantendo un'esperienza personalizzata durante la navigazione.</li>
+        </ul>
+
+        <p class="paragraph-resume">"Cocktail DB Web Application" combina un backend solido e scalabile con un frontend user-friendly, offrendo agli utenti un'esperienza di navigazione intuitiva e moderna. Grazie all'integrazione con l'API TheCocktailDB, l'applicazione mette a disposizione una vasta gamma di ricette di cocktail, filtrabili e personalizzabili, il tutto con un design ottimizzato per ogni dispositivo.</p>
+        <a href="https://github.com/ppaola888/CocktailDB-API" class="btn-box" target="_blank">Visita il Progetto</a>
+    </div>
+</section>
+
+{% endblock %}

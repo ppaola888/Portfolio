@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Paola Peruzzi">
+    <meta name="description" content="Portfolio di Paola Peruzzi, sviluppatrice junior specializzata in backend, Python e Java.">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header class="header">
+        <a href="/" class="logo">Portfolio</a>
+
+        <button class="hamburger" aria-label="Toggle navigation">
+            <span class="line"></span>
+            <span class="line"></span>
+            <span class="line"></span>
+        </button>
+
+        <nav class="navbar">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Servizi</a>
+            <a href="#skill">Skill</a>
+            <a href="#project">Project</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    {% block content %}
+    <section class="home">
+        <div class="home-content">
+            <h3>Benvenuti, mi chiamo</h3>
+            <h1>Paola Peruzzi</h1>
+            <h3>E sono una<span class="text"></span></h3>
+            <p>Sviluppatrice junior con un forte focus sul backend. Sono sempre alla ricerca di nuove sfide e opportunità per approfondire le mie competenze e contribuire a progetti di valore.<br></p>
+
+            <div class="home-icons">
+                <a href="https://www.linkedin.com/in/paolaperuzzi84/" target="_blank"><i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/ppaola888" target="_blank"><i class="bi bi-github"></i></a>
+                <a href="https://wa.me/393319066196" target="_blank"><i class="bi bi-whatsapp"></i></a>
+            </div>
+            <a href="#about" class="btn-box">More About Me</a>
+        </div>
+    </div>
+    <img src="{{ url_for('static', filename='images/paolaF1.png') }}" alt="Paola Peruzzi - Junior Python-Java Developer" class="home-image" loading="lazy">
+    <span class="home-imgHover"></span>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-img">
+            <img src="static/images/paola_pic.png" alt="Paola Peruzzi">
+        </div>
+        <div class="about-text">
+            <h2>Chi <span>sono</span></h2>
+            <h4>Sviluppatrice Junior</h4>
+            <p>
+                Sono una sviluppatrice Junior con conoscenze in Python e Java, costantemente motivata ad apprendere e crescere nel campo dello sviluppo web. La mia esperienza imprenditoriale di 5 anni nella gestione di un eCommerce mi ha permesso di acquisire competenze in customer care, ottimizzazione dell'esperienza utente, innovazione continua e autonomia operativa. Inoltre, il mio background di 7 anni nel settore turistico, gestendo un affittacamere e lavorando come reservation agent per una società specializzata nella gestione di strutture ricettive, ha affinato le mie capacità organizzative, operative e orientate alla soddisfazione del cliente.
+            </p>
+            <p>
+                La mia transizione verso lo sviluppo software, non è solo un cambiamento di carriera, ma è una scelta consapevole, che unisce le esperienze maturate con la passione per la tecnologia. Dopo aver completato un bootcamp intensivo in Python e un corso di Web Development, da 6 mesi ho intrapreso la carriera da freelance per contribuire a progetti innovativi che affrontano sfide reali, migliorando l'esperienza utente.
+            </p>
+            <p>
+                Sono alla ricerca di opportunità per collaborare con team dinamici e supportare lo sviluppo di soluzioni tecnologiche di valore.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <div class="services" id="services">
+            <div class="container">
+                <h1 class="title">I miei <span>Servizi</span></h1>
+                <div class="services-list">
+                    <div>
+                        <i class="bi bi-code-square"></i>
+                        <h2>Sviluppo Web Backend</h2>
+                        <p>Offro servizi di sviluppo web backend focalizzati sulla creazione di applicazioni scalabili, robuste e personalizzabili. Utilizzo linguaggi e framework moderni, come Flask con Python e Express in Node.js, per creare soluzioni solide e performanti.</p>
+                        <a href="#" class="read" onclick="toggleDescription(event)">read more</a>
+                        <div class="full-description" style="display: none;">
+                            <p>Sono specializzata nell'integrazione di database relazionali, in particolare PostgreSQL, e utilizzo strumenti come SQLAlchemy per gestire i dati in modo efficiente e flessibile. Questo approccio mi permette di ottimizzare le query, di migliorare le prestazioni complessive delle applicazioni e garantire una gestione dei dati scalabile. Mi impegno a seguire le migliori pratiche di sviluppo per garantire sicurezza, facilità di manutenzione e scalabilità delle applicazioni.</p>
+                        </div>
+                    </div>
+
+                    <div>
+                        <i class="bi bi-crop"></i>
+                        <h2>Web Scraping e Automazione</h2>
+                        <p>Fornisco soluzioni di web scraping e automazione per raccogliere e analizzare dati da fonti online. Grazie a strumenti moderni, come Beautiful Soup e Selenium, sono in grado di estrarre informazioni da API e siti web per migliorare strategie aziendali.</p>
+                        <a href="#" class="read" onclick="toggleDescription(event)">read more</a>
+                        <div class="full-description" style="display: none;">
+                            <p>I dati raccolti vengono forniti nei formati più adatti alle diverse esigenze, come CSV, JSON o direttamente integrati in database relazionali. Inoltre, sviluppo bot automatizzati per gestire compiti ripetitivi, come la registrazione automatica a servizi online, la gestione di account o l'invio di notifiche email personalizzate. Un esempio di applicazione pratica è l'automazione della programmazione dei turni di lavoro attraverso un'interfaccia web, utilizzando Selenium per interagire dinamicamente con i moduli, gestendo operazioni in background in modo efficiente.</p>
+
+                        </div>
+                    </div>
+
+                    <div>
+                        <i class="bi bi-app"></i>
+                        <h2>Applicazioni Web Dinamiche</h2>
+                        <p>Sviluppo applicazioni web dinamiche utilizzando il framework Flask per il backend, EJS per il rendering lato server e JavaScript per l'interattività. Realizzo interfacce moderne, intuitive e reattive che offrono un'esperienza utente coinvolgente.</p>
+                        <a href="#" class="read" onclick="toggleDescription(event)">read more</a>
+                        <div class="full-description" style="display: none;">
+                            <p>Mi occupo di curare l'aspetto del frontend per garantire una user experience chiara e di facile utilizzo, mentre nel backend mi assicuro che la struttura del codice sia ben organizzata e facile da manutenere. Utilizzo framework come Bootstrap e CSS per creare design moderni e responsive, garantendo che le applicazioni siano ottimizzate per funzionare su diversi dispositivi. Inoltre, seguo le best practices di sviluppo per mantenere il codice pulito, modulare e facilmente espandibile per futuri miglioramenti e integrazioni.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <h1 class="sub-title">My <span>Skills</span></h1>
+
+    <section>
+        <div class="container-skills" id="skill">
+            <h1 class="heading1">Technical Skills</h1>
+            <div class="badges">
+            <span class="badge"><i class="bi bi-filetype-html"></i> HTML</span>
+            <span class="badge"><i class="bi bi-filetype-css"></i> CSS</span>
+            <span class="badge"><i class="bi bi-filetype-js"></i> JavaScript</span>
+            <span class="badge"><i class="bi bi-filetype-py"></i> Python</span>
+            <span class="badge"><i class="bi bi-bootstrap"></i> Bootstrap</span>
+            <span class="badge"><i class="bi bi-git"></i> Git</span>
+            <span class="badge"><i class="bi bi-terminal"></i> Command Line</span>
+        </div>
+    </div>
+    </section>
+
+    <section>
+        <div id="project" class="projects">
+            <div class="text" id="portfolio-project">
+                <h2>Ultimi <span>Progetti</span></h2>
+
+                <div class="portfolio-content">
+                    <div class="row">
+                        <img src="{{ url_for('static', filename='images/project1.jpg') }}" alt="Bike Shop">
+                        <div class="projects-layer">
+                            <h5>Bike Shop</h5>
+                            <p>Un sito web dedicato alla vendita di biciclette, monopattini e accessori, realizzato con Python e Flask. Gli utenti possono esplorare e acquistare prodotti, gestire la loro wishlist, il carrello e completare gli acquisti tramite Stripe.</p>
+                            <a href="{{ url_for('project_detail_1') }}"><i class="bi bi-box-arrow-up-right"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <img src="{{ url_for('static', filename='images/project2.jpg') }}" alt="Blog Management System">
+                    <div class="projects-layer">
+                        <h5>Blog Management System</h5>
+                        <p>Sistema di gestione blog sviluppato con Node.js e Express, che permette agli utenti di creare, modificare e condividere articoli in modo sicuro e interattivo.</p>
+                        <a href="{{ url_for('project_detail_2') }}"><i class="bi bi-box-arrow-up-right"></i></a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <img src="{{ url_for('static', filename='images/project3.jpg') }}" alt="The Cocktail DB API">
+                <div class="projects-layer">
+                    <h5>The Cocktail DB API</h5>
+                    <p>Un'applicazione web per scoprire e esplorare cocktail, utilizzando l'API di The Cocktail DB. Consente agli utenti di cercare, filtrare e visualizzare ricette di cocktail in modo interattivo e dinamico.</p>
+                    <a href="{{ url_for('project_detail_3') }}"><i class="bi bi-box-arrow-up-right"></i></a>
+                </div>
+            </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="contact-text">
+            <h2>Contatta<span>Mi</span></h2>
+            <h4>Lavoriamo insieme</h4>
+            <p>La mia aspirazione è quella di apprendere continuamente e progredire nel mondo dello sviluppo web.</p>
+            <div class="contact-list">
+                <li><i class="bi bi-envelope"></i>peruzzipaola84@gmail.com</li>
+                <li><i class="bi bi-telephone"></i>+39 3319066196</li>
+            </div>
+            <div class="contact-icons">
+                <a href="https://www.linkedin.com/in/paolaperuzzi84/" target="_blank" rel="noopener noreferrer"><i class="bi bi-linkedin"></i></a>
+                <a href="https://github.com/ppaola888" target="_blank" rel="noopener noreferrer"><i class="bi bi-github"></i></a>
+                <a href="https://wa.me/393319066196" target="_blank" rel="noopener noreferrer"><i class="bi bi-whatsapp"></i></a>
+            </div>
+        </div>
+        <div class="contact-form">
+            <form action="/contact" method="POST">
+                <input type="text" name="name" placeholder="Inserisci il tuo Nome" required>
+                <input type="email" name="email" placeholder="Inserisci la tua Email" required>
+                <input type="text" name="subject" placeholder="Inserisci l'oggetto">
+                <textarea name="message" id="message" columns="40" rows="10" placeholder="Inserisci il tuo Messaggio" required></textarea>
+                <input type="submit" value="submit" class="send">
+            </form>
+        </div>
+    </section>
+    {% endblock %}
+
+    <section class="footer">
+    <div class="footer">
+        <p> &copy; 2024 Developed by Paola Peruzzi </p>
+        <ul>
+            <li><a href="{{ url_for('credits') }}">Crediti Immagini</a></li>
+        </ul>
+    </div>
+    </section>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    <script>
+        function toggleDescription(event) {
+            event.preventDefault(); 
+            const description = event.target.nextElementSibling; 
+    
+            if (description.style.display === "none") {
+                description.style.display = "block"; 
+                event.target.innerText = "read less"; 
+            } else {
+                description.style.display = "none"; 
+                event.target.innerText = "read more"; 
+            }
+        }
+    </script>
+
+    <script>
+         document.addEventListener('DOMContentLoaded', function () {
+        const hamburger = document.querySelector('.hamburger');
+        const navbar = document.querySelector('.navbar');
+
+        hamburger.addEventListener('click', function () {
+            navbar.classList.toggle('active');
+        });
+    });
+    </script>
+
+    <a href="#top" class="top"><i class="bi bi-arrow-up-square"></i></a>
+    <script>
+        window.onscroll = function() {
+            const scrollPosition = document.documentElement.scrollTop || document.body.scrollTop;
+            const pageHeight = document.documentElement.scrollHeight;
+            const windowHeight = window.innerHeight;
+    
+            if (scrollPosition + windowHeight >= pageHeight - 100) {
+                document.querySelector('.top').style.display = 'inline-block';
+            } else {
+                document.querySelector('.top').style.display = 'none';
+            }
+        };
+    
+        document.querySelector('.top').onclick = function() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        };
+    </script>
+    
+</body>
+</html>

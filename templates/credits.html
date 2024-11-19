@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+
+{% block title %}Crediti - Portfolio{% endblock %}
+
+{% block content %}
+<div class="credits">
+    <h1>Crediti Foto</h1>
+        <section>
+            <h2>API project</h2>
+            <p>Foto di <a href="https://unsplash.com/@douglaslopes" target="_blank">Douglas Lopes</a> su <a href="https://unsplash.com" target="_blank">Unsplash</a>.</p>
+        </section>
+        <section>
+            <h2>Sito Web Project</h2>
+            <p>Foto di <a href="https://unsplash.com/@domenicoloia" target="_blank">Domenico Loia</a> su <a href="https://unsplash.com" target="_blank">Unsplash</a>.</p>
+        </section>
+        <section>
+            <h2>Blog Project</h2>
+            <p>Foto di <a href="https://unsplash.com/@unseenstudio" target="_blank">Unseen Studio</a> su <a href="https://unsplash.com" target="_blank">Unsplash</a>.</p>
+        </section>
+        <a href="{{ url_for('home') }}">Torna alla Home</a>
+</div>
+
+{% endblock %}

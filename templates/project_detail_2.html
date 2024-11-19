@@ -1,0 +1,27 @@
+{% extends 'index.html' %}
+
+{% block title %}Blog Website{% endblock %}
+
+{% block content %}
+
+<section class="project-detail">
+    <div class="container-project-detail">
+        <h1>Blog Management System</h1>
+        <img src="{{ url_for('static', filename='images/project2.jpg') }}" alt="Blog Management System">
+        <h4>Descrizione</h4>
+        <p>Il Blog Management System è un'applicazione web versatile progettata per semplificare la creazione, gestione e condivisione di contenuti da parte degli utenti autenticati. Con funzionalità complete e avanzate come la registrazione, il login, la creazione e modifica di post, oltre alla gestione delle categorie e delle immagini, questa applicazione offre un'esperienza utente fluida e interattiva. L'obiettivo principale del progetto è fornire uno spazio dove gli utenti possono condividere idee, opinioni e articoli, in modo sicuro e ben organizzato.</p>
+
+        <h4> Sfide e Criticità</h4>
+        <ul>
+            <li><strong>Autenticazione Utente:</strong> Ho implementato un sistema di autenticazione robusto utilizzando Passport.js, che supporta sia la registrazione degli utenti con credenziali locali che l'autenticazione tramite Google OAuth. La gestione sicura dei dati sensibili è stata una priorità, con una forte attenzione alla protezione delle password grazie all'uso di bcrypt.</li>
+            <li><strong>Interazione con il Database:</strong> L'integrazione con PostgreSQL per memorizzare i dati ha comportato la scrittura di query SQL complesse per gestire post, utenti e categorie. L'ottimizzazione delle query è stata una sfida per garantire performance elevate e un'esperienza utente fluida.</li>
+            <li><strong>Upload di Immagini:</strong> L'implementazione di multer per la gestione dell'upload delle immagini ha richiesto attenzione nella gestione efficiente dello storage e dell'accesso alle immagini caricate, per evitare rallentamenti.</li>
+            <li><strong>Interfaccia Utente:</strong> Ho sviluppato un'interfaccia utente user-friendly utilizzando EJS e Bootstrap, garantendo una navigazione semplice e accessibile a tutti, anche agli utenti meno esperti. La gestione della visualizzazione dinamica dei contenuti è stata progettata per ottimizzare l'esperienza dell'utente su dispositivi di diverse dimensioni.</li>
+            <li><strong>Tecnologie Utilizzate:</strong> L'applicazione è stata sviluppata usando Express.js e Node.js per il backend, garantendo un'architettura scalabile. La gestione del database è stata affidata a PostgreSQL, un sistema di gestione di database relazionali robusto e affidabile. Per l'autenticazione degli utenti ho usato Passport.js, che supporta diverse strategie di login (autenticazione locale e tramite Google OAuth). Ho integrato multer per gestire l'upload delle immagini, EJS per gestire il sistema di template rendering, bcrypt per la crittografia delle password, SendGrid per l'invio delle email di notifica e conferma in modo rapido ed efficace.</li>
+        </ul>
+
+        <p class="paragraph-resume">Il Blog Management System non solo offre una solida piattaforma per la creazione di contenuti, ma rappresenta anche un esempio di progettazione di un sistema web moderno, sicuro, scalabile e semplice da gestire e aggiornare.</p>
+        <a href="https://github.com/ppaola888/Blog-website" class="btn-box" target="_blank">Visita il Progetto</a>
+    </div>
+</section>
+{% endblock %}
